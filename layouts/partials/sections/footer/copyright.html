@@ -10,6 +10,7 @@
                 </div>
             {{ end }}
             &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default "All Rights Reserved" }}
+            {{ if .Site.Params.footerMake.show | default false }}
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -21,6 +22,7 @@
                     Hugo Profile
                 </a>
             </div>
+            {{ end }}
         </div>
     </div>
 </div>
